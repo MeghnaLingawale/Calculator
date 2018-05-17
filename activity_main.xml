@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Number1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.addtwono.calculator.MainActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <EditText
+        android:id="@+id/number1_et"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="39dp"
+        android:ems="10"
+        android:hint="@string/number1"
+        android:inputType="number"
+        android:visibility="visible"
+        android:text="123"
+        app:layout_constraintBottom_toTopOf="@+id/number2_et"
+        app:layout_constraintEnd_toEndOf="@+id/number2_et"
+        app:layout_constraintStart_toStartOf="@+id/number2_et"
+        app:layout_constraintTop_toBottomOf="@+id/Result"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/number2_et"
+        android:layout_width="213dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="69dp"
+        android:layout_marginStart="30dp"
+        android:ems="10"
+        android:hint="@string/number2"
+        android:inputType="number"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/Sum_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1_et"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="30dp" />
+
+    <EditText
+        android:id="@+id/Result"
+        android:layout_width="295dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="41dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/number1_et"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="30dp" />
+
+    <Button
+        android:id="@+id/Sum_btn"
+        android:layout_width="149dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="103dp"
+        android:layout_marginStart="37dp"
+        android:onClick="onButtonClick"
+        android:text="@string/sum_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number2_et"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="37dp" />
+</android.support.constraint.ConstraintLayout>
